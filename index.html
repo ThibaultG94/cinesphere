@@ -5,24 +5,96 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CineSphere</title>
 		<link rel="stylesheet" href="style.css" />
-		<script src="form.js" defer></script>
 	</head>
 	<body>
 		<header>
-			<h1>CineSphere</h1>
 			<nav>
-				<button id="signup-btn">Inscription</button>
-				<button id="login-btn">Connexion</button>
+				<h1>CineSphere</h1>
+				<ul>
+					<li><a href="#">Accueil</a></li>
+					<li><a href="#" id="login-btn">Connexion</a></li>
+					<li><a href="#" id="signup-btn">Inscription</a></li>
+				</ul>
 			</nav>
 		</header>
 
-		<main>
-			<h2>Bienvenue sur CineSphere</h2>
-			<!-- ... Contenu de la page d'accueil ... -->
-		</main>
+		<section class="hero">
+			<h2>Explorez le monde du cinéma autrement</h2>
+			<p>
+				Découvrez des films méconnus et discutez avec d'autres
+				passionnés de cinéma
+			</p>
+			<form class="search-form">
+				<input
+					type="text"
+					placeholder="Recherchez un film, un réalisateur, un acteur..." />
+				<button type="submit">Rechercher</button>
+			</form>
+		</section>
 
-		<!-- Fenêtre modale pour l'inscription -->
-		<div id="signup-modal" class="modal">
+		<section class="features">
+			<div class="feature">
+				<h3>Recommandations personnalisées</h3>
+				<p>
+					Obtenez des suggestions de films basées sur vos préférences
+					et vos listes
+				</p>
+			</div>
+			<div class="feature">
+				<h3>Forums de discussion</h3>
+				<p>
+					Participez à des discussions autour de vos films,
+					réalisateurs et genres préférés
+				</p>
+			</div>
+			<div class="feature">
+				<h3>Listes personnalisées</h3>
+				<p>
+					Créez et partagez vos propres listes de films pour suivre
+					vos découvertes
+				</p>
+			</div>
+		</section>
+
+		<section class="about">
+			<h2>À propos de CineSphere</h2>
+			<p>
+				CineSphere est une plateforme créée pour les cinéphiles qui
+				souhaitent explorer le monde du cinéma au-delà des tendances et
+				des nouveautés. Notre objectif est de vous aider à découvrir des
+				films moins connus et à échanger avec d'autres passionnés de
+				cinéma.
+			</p>
+		</section>
+
+		<footer>
+			<p>&copy; 2023 CineSphere. Tous droits réservés.</p>
+		</footer>
+
+		<div class="modal" id="login-modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h3>Se connecter</h3>
+				<form id="login-form">
+					<label for="login-email">Adresse e-mail :</label>
+					<input
+						type="email"
+						id="login-email"
+						placeholder="Ex: johndoe@example.com"
+						required />
+					<label for="login-password">Mot de passe :</label>
+					<input
+						type="password"
+						id="login-password"
+						placeholder="Entrez votre mot de passe"
+						required />
+					<a href="#" id="forgot-password">Mot de passe oublié ?</a>
+					<button type="submit">Se connecter</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="modal" id="signup-modal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
 				<h3>Créer un compte</h3>
@@ -55,32 +127,6 @@
 			</div>
 		</div>
 
-		<!-- Fenêtre modale pour la connexion -->
-		<div id="login-modal" class="modal">
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<h3>Se connecter</h3>
-				<form id="login-form">
-					<label for="login-email">Adresse e-mail :</label>
-					<input
-						type="email"
-						id="login-email"
-						placeholder="Ex: johndoe@example.com"
-						required />
-					<label for="login-password">Mot de passe :</label>
-					<input
-						type="password"
-						id="login-password"
-						placeholder="Entrez votre mot de passe"
-						required />
-					<a href="#" id="forgot-password">Mot de passe oublié ?</a>
-					<button type="submit">Se connecter</button>
-				</form>
-			</div>
-		</div>
-
-		<footer>
-			<p>&copy; 2023 CineSphere. Tous droits réservés.</p>
-		</footer>
+		<script src="app.js"></script>
 	</body>
 </html>
